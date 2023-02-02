@@ -1,0 +1,141 @@
+:root {
+    --main: #111;
+    --first-color: #1C1C1C;
+    --second-color: #EDA436;
+    --third-color: #ECEBE4;
+    --fourth-color: #383838;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--main);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 1.8em;
+    transition: all .50s ease;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    font-family: 'Courier Prime', monospace;
+    color: var(--third-color);
+    font-size: 1.2rem;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--third-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+    font-family: 'Courier Prime', monospace;
+}
+
+.navbar a:hover {
+    color: var(--second-color);
+}
+
+.navbar a.active {
+    color: var(--second-color);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    margin-right: .5em;
+    margin-left: .125em;
+    color: var(--third-color);
+    font-size: .95rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+
+#menu-icon {
+    font-size: 1.5rem;
+    margin-left: 1em;
+    color: var(--third-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    header {
+        padding: .9em 2%;
+        transition: .2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        padding: 1.5em;
+        background-color: var(--first-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+        margin: 1em 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+
+    .navbar a:hover {
+        color: var(--second-color);
+        transform: translateY(5px);
+    }
+
+    .navbar a.active {
+        color: var(--second-color);
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+}

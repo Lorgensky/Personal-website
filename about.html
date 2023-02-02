@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+
+    <link rel="stylesheet" href="about.css">
+
+     <!-- fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+ 
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+ 
+     <!-- fontawesome -->
+     <script src="https://kit.fontawesome.com/79fea2c827.js" crossorigin="anonymous"></script>
+ 
+     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+     <script>  
+        $(function(){ 
+          $("#header").load("header.html");  
+        }); 
+    </script> 
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <main>
+        <div id="header"></div>
+        <div class="container">
+            <div class="header">
+                <h1 class="title">About me</h1>
+            </div>
+
+            <h2 class="bio_title">My Biography</h2>
+            <div class="bio">
+                <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae consequatur, illo fugiat ducimus esse, animi autem doloribus hic non officiis repudiandae eius. Earum minus necessitatibus molestias suscipit nihil eaque, exercitationem, eveniet ea nobis voluptatum harum unde delectus, eos ipsum. Eum ipsam quidem accusamus quaerat placeat. Cupiditate culpa laboriosam omnis nihil?</p>
+
+                <p class="p2">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore laudantium, tenetur explicabo molestiae assumenda rem quidem porro doloribus non harum repudiandae perspiciatis eaque eveniet reiciendis inventore sunt. Itaque, repellendus inventore.
+                </p>
+            </div>
+
+            <div class="picture">
+                <div class="wrapper">
+                    <div class="item swiper">
+                        <!-- Additional required wrapper -->
+                        
+                        <div class="item_wrapper swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="item_card swiper-slide">
+                             <img src="images/pic1.jpg" alt="pic1"
+                             width="100%">
+                            </div>
+                            <div class="item_card swiper-slide">
+                                <img src="images/pexels-monstera-6311721.jpg" alt="pic2" width="100%">
+                            </div>
+                            <div class="item_card swiper-slide">
+                                <img src="images/pic3.jpg" alt="pic3" width="100%">
+                            </div>
+                        
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="item_pagination swiper-pagination"></div>               
+                    </div>
+               </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="swiper.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- magnific popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <link rel="stylesheet" href="portfolio.css">
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>  
+        $(function(){ 
+          $("#header").load("header.html");  
+        }); 
+    </script> 
+
+</head>
+<body>
+
+    <div id="header"></div>
+    <div class="gallery">
+        <ul class="controls">
+            <li class="buttons active" data-filter="all">All</li>
+            <li class="buttons" data-filter="graphic-design">Graphic</li>
+            <li class="buttons" data-filter="ui-ux">UI/UX</li>
+            <li class="buttons" data-filter="logo">Logo</li>
+            <li class="buttons" data-filter="website">Website</li>
+        </ul>
+
+        <div class="image-container">
+            <a href="images/card.png" class="image graphic-design">
+                <img src="images/card.png" alt="card" width="100%">
+            </a>
+            <a href="images/changeApp.png" class="image graphic-design">
+                <img src="images/changeApp.png" alt="card" width="100%">
+            </a>
+            <a href="images/EasyTrans2.png" class="image graphic-design">
+                <img src="images/EasyTrans2.png" alt="card" width="100%">
+            </a>
+
+            <a href="images/ErickFlyer copy.jpg" class="image ui-ux">
+                <img src="images/ErickFlyer copy.jpg" alt="" width="100%">
+            </a>
+            <a href="images/ErickFlyer copy.jpg" class="image ui-ux">
+                <img src="images/notredamedelapriere copy.jpg" alt="" width="100%">
+            </a>
+
+            <a href="images/projet2.jpg" class="image logo">
+                <img src="images/projet2.jpg" alt="" width="100%">
+            </a>
+
+            <a href="images/changeApp.png" class="image website">
+                <img src="images/changeApp.png" alt="" width="100%">
+            </a>
+        </div>
+    </div>
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- magnific popup js cdn link  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.buttons').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+                var filter = $(this).attr('data-filter')
+
+                if(filter == 'all') {
+                    $('.image').show(400);
+                }else {
+                    $('.image').not('.'+filter).hide(200);
+                    $('.image').filter('.'+filter).show(400);
+                }
+            })
+
+            $('.gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled:true
+                }
+
+            });
+        })
+    </script>
+</body>
+</html>
